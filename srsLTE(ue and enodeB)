@@ -1,0 +1,995 @@
+sajal@sajal-Lenovo-G50-70:~/srsLTE/build/lib/examples$ ls -al
+total 6804
+drwxrwxr-x  3 sajal sajal    4096 Jun 28 01:59 .
+drwxrwxr-x  7 sajal sajal    4096 Jun 27 22:07 ..
+-rwxrwxr-x  1 sajal sajal  515440 Jun 27 22:08 cell_measurement
+-rwxrwxr-x  1 sajal sajal  320000 Jun 27 22:08 cell_search
+drwxrwxr-x 10 sajal sajal    4096 Jun 27 22:07 CMakeFiles
+-rw-rw-r--  1 sajal sajal     993 Jun 27 22:07 cmake_install.cmake
+-rw-rw-r--  1 sajal sajal     281 Jun 27 22:07 CTestTestfile.cmake
+-rw-rw-r--  1 sajal sajal   19245 Jun 27 22:07 Makefile
+-rwxrwxr-x  1 sajal sajal  460944 Jun 27 22:08 pdsch_enodeb
+-rw-rw-r--  1 sajal sajal 4608000 Jun 28 02:04 pdsch.out
+-rwxrwxr-x  1 sajal sajal  530464 Jun 27 22:08 pdsch_ue
+-rwxrwxr-x  1 sajal sajal  160424 Jun 27 22:08 synch_file
+-rwxrwxr-x  1 sajal sajal   18888 Jun 27 22:08 usrp_capture
+-rwxrwxr-x  1 sajal sajal  189560 Jun 27 22:08 usrp_capture_sync
+-rwxrwxr-x  1 sajal sajal  105880 Jun 27 22:08 usrp_txrx
+sajal@sajal-Lenovo-G50-70:~/srsLTE/build/lib/examples$ ./pdsch_enodeb -h
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.010.001.001-release
+
+./pdsch_enodeb: invalid option -- 'h'
+Usage: ./pdsch_enodeb [agmfoncvpu]
+	-a RF args [Default ]
+	-l RF amplitude [Default 0.80]
+	-g RF TX gain [Default 70.00 dB]
+	-f RF TX frequency [Default 2400.0 MHz]
+	-o output_file [Default use RF board]
+	-m MCS index [Default 1]
+	-n number of frames [Default -1]
+	-c cell id [Default 0]
+	-p nof_prb [Default 25]
+	-u listen TCP port for input data (-1 is random) [Default -1]
+	-v [set srslte_verbose to debug, default none]
+sajal@sajal-Lenovo-G50-70:~/srsLTE/build/lib/examples$ ./pdsch_ue -h
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.010.001.001-release
+
+./pdsch_ue: invalid option -- 'h'
+Usage: ./pdsch_ue [agpPoOcildDnruv] -f rx_frequency (in Hz) | -i input_file
+	-a RF args [Default ]
+	-A Number of RX antennas [Default 1]
+	-g RF fix RX gain [Default AGC]
+	-i input_file [Default use RF board]
+	-o offset frequency correction (in Hz) for input file [Default 0.0 Hz]
+	-O offset samples for input file [Default 0]
+	-p nof_prb for input file [Default 25]
+	-P nof_ports for input file [Default 1]
+	-c cell_id for input file [Default 0]
+	-r RNTI in Hex [Default 0xffff]
+	-l Force N_id_2 [Default best]
+	-C Disable CFO correction [Default Enabled]
+	-t Add time offset [Default 0]
+	-d disable plots [Default enabled]
+	-D disable all but constellation plots [Default enabled]
+	-y set the cpu affinity mask [Default -1] 
+  	-n nof_subframes [Default -1]
+	-s remote UDP port to send input signal (-1 does nothing with it) [Default -1]
+	-S remote UDP address to send input signal [Default 127.0.0.1]
+	-u remote TCP port to send data (-1 does nothing with it) [Default -1]
+	-U remote TCP address to send data [Default 127.0.0.1]
+	-v [set srslte_verbose to debug, default none]
+sajal@sajal-Lenovo-G50-70:~/srsLTE/build/lib/examples$  ./pdsch_enodeb -o "pdsch.out" -n 10 -m 9
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.010.001.001-release
+
+ - Resource Allocation Type:		Type 0
+   + Resource Block Group Size:		2
+   + RBG Bitmap:			0x1fff
+ - Modulation and coding scheme index:	9
+ - HARQ process:			0
+ - New data indicator:			No
+ - Redundancy version:			0
+ - TPC command for PUCCH:		--
+ - PRB Bitmap Assignment 0st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - PRB Bitmap Assignment 1st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - Number of PRBs:			25
+ - Modulation type:			QPSK
+ - Transport block size:		4008
+Type new MCS index and press Enter: 10
+ - Resource Allocation Type:		Type 0
+   + Resource Block Group Size:		2
+   + RBG Bitmap:			0x1fff
+ - Modulation and coding scheme index:	10
+ - HARQ process:			0
+ - New data indicator:			No
+ - Redundancy version:			0
+ - TPC command for PUCCH:		--
+ - PRB Bitmap Assignment 0st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - PRB Bitmap Assignment 1st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - Number of PRBs:			25
+ - Modulation type:			16QAM
+ - Transport block size:		4008
+Type new MCS index and press Enter: Done
+sajal@sajal-Lenovo-G50-70:~/srsLTE/build/lib/examples$ ./pdsch_ue -i "pdsch.out" -n 10 -r 1234
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.010.001.001-release
+
+ - Cell ID:         0
+ - Nof ports:       1
+ - CP:              Normal  
+ - PRB:             25
+ - PHICH Length:    Normal
+ - PHICH Resources: 1
+ - SFN:             0
+Decoded MIB. SFN: 0, offset: 0
+Hangup
+
+
+root@sajal-Lenovo-G50-70:/home/sajal/srsLTE/build/lib/examples# ./pdsch_ue -i "pdsch.out" -n 10 -r 1234
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.010.001.001-release
+
+
+(process:3261): GConf-WARNING **: Client failed to connect to the D-BUS daemon:
+Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+
+(pdsch_ue:3261): GConf-WARNING **: Client failed to connect to the D-BUS daemon:
+Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+
+(pdsch_ue:3261): GLib-GIO-CRITICAL **: g_dbus_connection_register_object: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(pdsch_ue:3261): GLib-GIO-CRITICAL **: g_dbus_connection_register_object: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(pdsch_ue:3261): GLib-GIO-CRITICAL **: g_dbus_connection_get_unique_name: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(pdsch_ue:3261): GLib-GIO-CRITICAL **: g_dbus_connection_register_object: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(pdsch_ue:3261): GLib-GIO-CRITICAL **: g_dbus_connection_register_object: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(pdsch_ue:3261): GLib-GIO-CRITICAL **: g_dbus_connection_get_unique_name: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+Qt: Session management error: None of the authentication protocols specified are supported
+ - Cell ID:         0
+ - Nof ports:       1
+ - CP:              Normal  
+ - PRB:             25
+ - PHICH Length:    Normal
+ - PHICH Resources: 1
+ - SFN:             0
+Decoded MIB. SFN: 0, offset: 0
+Hangup
+root@sajal-Lenovo-G50-70:/home/sajal/srsLTE/build/lib/examples# ./pdsch_enodeb -o "pdsch.out" -n 10 -m 9 -v
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.010.001.001-release
+
+[INFO]:  Indexing 200 REGs. CellId: 0, 25 PRB, CP: Normal
+[INFO]:  PCFICH allocating 4 regs. CellID: 0, PRB: 25
+[INFO]:  Creating 4 PHICH mapping units. Normal length, Ng=1.00
+[INFO]:  Init PDCCH REG space CFI 1. 27 useful REGs (3 CCEs)
+[INFO]:  Init PDCCH REG space CFI 2. 108 useful REGs (12 CCEs)
+[INFO]:  Init PDCCH REG space CFI 3. 180 useful REGs (20 CCEs)
+[INFO]:  Init PDCCH: Max bits: 1440, 1 ports.
+[INFO]:  Init PDSCH: 1 ports 25 PRBs, max_symbols: 4200
+ - Resource Allocation Type:		Type 0
+   + Resource Block Group Size:		2
+   + RBG Bitmap:			0x1fff
+ - Modulation and coding scheme index:	9
+ - HARQ process:			0
+ - New data indicator:			No
+ - Redundancy version:			0
+ - TPC command for PUCCH:		--
+ - PRB Bitmap Assignment 0st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - PRB Bitmap Assignment 1st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - Number of PRBs:			25
+ - Modulation type:			QPSK
+ - Transport block size:		4008
+Type new MCS index and press Enter: [INFO]:  SF: 0, Generating 0 random bits
+[INFO]:  SF: 1, Generating 0 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 1, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 2, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 2, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 3, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 3, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 4, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 4, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 5, Generating 4008 random bits
+[INFO]:  SF: 6, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=0, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 6, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 7, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 7, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 8, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 8, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 9, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=0, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 9, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 0, Generating 4008 random bits
+[INFO]:  SF: 1, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 1, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 2, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 2, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 3, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 3, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 4, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 4, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 5, Generating 4008 random bits
+[INFO]:  SF: 6, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=0, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 6, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 7, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 7, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 8, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 8, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 9, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=0, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 9, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 0, Generating 4008 random bits
+[INFO]:  SF: 1, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 1, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 2, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 2, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 3, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 3, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 4, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 4, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 5, Generating 4008 random bits
+[INFO]:  SF: 6, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=0, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 6, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 7, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 7, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 8, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 8, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 9, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=0, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 9, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 0, Generating 4008 random bits
+[INFO]:  SF: 1, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 1, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 2, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 2, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 3, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 3, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 4, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 4, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 5, Generating 4008 random bits
+[INFO]:  SF: 6, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=0, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 6, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 7, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 7, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 8, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 8, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 9, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=0, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 9, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 0, Generating 4008 random bits
+[INFO]:  SF: 1, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 1, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 2, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 2, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 3, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 3, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 4, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 4, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 5, Generating 4008 random bits
+[INFO]:  SF: 6, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=0, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 6, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 7, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 7, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 8, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 8, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 9, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=0, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 9, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 0, Generating 4008 random bits
+[INFO]:  SF: 1, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 1, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 2, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 2, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 3, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 3, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 4, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 4, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 5, Generating 4008 random bits
+[INFO]:  SF: 6, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=0, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 6, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 7, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 7, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 8, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 8, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 9, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=0, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 9, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 0, Generating 4008 random bits
+[INFO]:  SF: 1, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 1, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 2, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 2, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 3, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 3, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 4, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 4, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 5, Generating 4008 random bits
+[INFO]:  SF: 6, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=0, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 6, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 7, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 7, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 8, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 8, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 9, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=0, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 9, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 0, Generating 4008 random bits
+[INFO]:  SF: 1, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 1, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 2, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 2, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 3, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 3, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 4, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 4, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 5, Generating 4008 random bits
+[INFO]:  SF: 6, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=0, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 6, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 7, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 7, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 8, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 8, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 9, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=0, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 9, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 0, Generating 4008 random bits
+[INFO]:  SF: 1, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 1, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 2, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 2, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 3, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 3, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 4, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 4, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 5, Generating 4008 random bits
+[INFO]:  SF: 6, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=0, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 6, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 7, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 7, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 8, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 8, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 9, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=0, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 9, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 0, Generating 4008 random bits
+[INFO]:  SF: 1, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 1, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 2, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 2, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 3, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 3, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 4, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 4, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 5, Generating 4008 random bits
+[INFO]:  SF: 6, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=0, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 6, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 7, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 7, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 8, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=8, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 8, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+[INFO]:  SF: 9, Generating 4008 random bits
+[INFO]:  Putting DCI to location: n=0, L=3
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Encoding PDSCH SF: 9, Mod QPSK, NofBits: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300
+[INFO]:  Last CB, appending parity: 4008 from 0 and 24 to 4008
+[INFO]:  END CB#1: wp: 6300, rp: 4032
+Done
+root@sajal-Lenovo-G50-70:/home/sajal/srsLTE/build/lib/examples#  ./pdsch_ue -i "pdsch.out" -n 10 -r 1234 -v
+linux; GNU C++ version 5.4.0 20160609; Boost_105800; UHD_003.010.001.001-release
+
+[INFO]:  Offseting input file by 0 samples and 0.0 kHz
+[INFO]:  Indexing 200 REGs. CellId: 0, 25 PRB, CP: Normal
+[INFO]:  PCFICH allocating 4 regs. CellID: 0, PRB: 25
+[INFO]:  Creating 4 PHICH mapping units. Normal length, Ng=1.00
+[INFO]:  Init PDCCH REG space CFI 1. 27 useful REGs (3 CCEs)
+[INFO]:  Init PDCCH REG space CFI 2. 108 useful REGs (12 CCEs)
+[INFO]:  Init PDCCH REG space CFI 3. 180 useful REGs (20 CCEs)
+[INFO]:  Init PDCCH: Max bits: 1440, 1 ports.
+[INFO]:  Init PDSCH: 1 ports 25 PRBs, max_symbols: 4200
+[INFO]:  Initiated 0 candidate(s) in the Common search space
+[INFO]:  Initiated 4 candidate(s) in the Common search space
+[INFO]:  Initiated 6 candidate(s) in the Common search space
+
+(process:3274): GConf-WARNING **: Client failed to connect to the D-BUS daemon:
+Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+
+(pdsch_ue:3274): GConf-WARNING **: Client failed to connect to the D-BUS daemon:
+Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+
+(pdsch_ue:3274): GLib-GIO-CRITICAL **: g_dbus_connection_register_object: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(pdsch_ue:3274): GLib-GIO-CRITICAL **: g_dbus_connection_register_object: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(pdsch_ue:3274): GLib-GIO-CRITICAL **: g_dbus_connection_get_unique_name: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(pdsch_ue:3274): GLib-GIO-CRITICAL **: g_dbus_connection_register_object: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(pdsch_ue:3274): GLib-GIO-CRITICAL **: g_dbus_connection_register_object: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(pdsch_ue:3274): GLib-GIO-CRITICAL **: g_dbus_connection_get_unique_name: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+Qt: Session management error: None of the authentication protocols specified are supported
+[INFO]:  
+Entering main loop...
+
+[INFO]:  Reading 5760 samples. sf_idx = 0
+[INFO]:  Decoded PBCH: src=0, dst=0, nb=1, sfn_offset=0
+[INFO]:  MIB decoded: 0
+ - Cell ID:         0
+ - Nof ports:       1
+ - CP:              Normal  
+ - PRB:             25
+ - PHICH Length:    Normal
+ - PHICH Resources: 1
+ - SFN:             0
+Decoded MIB. SFN: 0, offset: 0
+[INFO]:  Reading 5760 samples. sf_idx = 1
+[INFO]:  Attempting DL decode SFN=0
+[INFO]:  Decoded CFI=3 with correlation 32.00, sf_idx=1
+[INFO]:  Searching DL C-RNTI in 16 ue locations, 2 formats
+ - Resource Allocation Type:		Type 0
+   + Resource Block Group Size:		2
+   + RBG Bitmap:			0x1fff
+ - Modulation and coding scheme index:	9
+ - HARQ process:			0
+ - New data indicator:			No
+ - Redundancy version:			0
+ - TPC command for PUCCH:		--
+ - PRB Bitmap Assignment 0st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - PRB Bitmap Assignment 1st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - Number of PRBs:			25
+ - Modulation type:			QPSK
+ - Transport block size:		4008
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Decoding PDSCH SF: 1, RNTI: 0x1234, Mod QPSK, TBS: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0, C_prb=25
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300, n_iters=1
+[INFO]:  END CB#1: wp: 4032, rp: 6300
+[INFO]:  Warning: Received all-zero transport block
+
+[INFO]:  TB decoded OK
+[INFO]:  Reading 5760 samples. sf_idx = 2
+[INFO]:  Attempting DL decode SFN=0
+[INFO]:  Decoded CFI=3 with correlation 32.00, sf_idx=2
+[INFO]:  Searching DL C-RNTI in 16 ue locations, 2 formats
+ - Resource Allocation Type:		Type 0
+   + Resource Block Group Size:		2
+   + RBG Bitmap:			0x1fff
+ - Modulation and coding scheme index:	9
+ - HARQ process:			0
+ - New data indicator:			No
+ - Redundancy version:			0
+ - TPC command for PUCCH:		--
+ - PRB Bitmap Assignment 0st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - PRB Bitmap Assignment 1st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - Number of PRBs:			25
+ - Modulation type:			QPSK
+ - Transport block size:		4008
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Decoding PDSCH SF: 2, RNTI: 0x1234, Mod QPSK, TBS: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0, C_prb=25
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300, n_iters=1
+[INFO]:  END CB#1: wp: 4032, rp: 6300
+[INFO]:  TB decoded OK
+[INFO]:  Reading 5760 samples. sf_idx = 3
+[INFO]:  Attempting DL decode SFN=0
+[INFO]:  Decoded CFI=3 with correlation 32.00, sf_idx=3
+[INFO]:  Searching DL C-RNTI in 16 ue locations, 2 formats
+ - Resource Allocation Type:		Type 0
+   + Resource Block Group Size:		2
+   + RBG Bitmap:			0x1fff
+ - Modulation and coding scheme index:	9
+ - HARQ process:			0
+ - New data indicator:			No
+ - Redundancy version:			0
+ - TPC command for PUCCH:		--
+ - PRB Bitmap Assignment 0st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - PRB Bitmap Assignment 1st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - Number of PRBs:			25
+ - Modulation type:			QPSK
+ - Transport block size:		4008
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Decoding PDSCH SF: 3, RNTI: 0x1234, Mod QPSK, TBS: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0, C_prb=25
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300, n_iters=1
+[INFO]:  END CB#1: wp: 4032, rp: 6300
+[INFO]:  TB decoded OK
+[INFO]:  Reading 5760 samples. sf_idx = 4
+[INFO]:  Attempting DL decode SFN=0
+[INFO]:  Decoded CFI=3 with correlation 32.00, sf_idx=4
+[INFO]:  Searching DL C-RNTI in 16 ue locations, 2 formats
+ - Resource Allocation Type:		Type 0
+   + Resource Block Group Size:		2
+   + RBG Bitmap:			0x1fff
+ - Modulation and coding scheme index:	9
+ - HARQ process:			0
+ - New data indicator:			No
+ - Redundancy version:			0
+ - TPC command for PUCCH:		--
+ - PRB Bitmap Assignment 0st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - PRB Bitmap Assignment 1st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - Number of PRBs:			25
+ - Modulation type:			QPSK
+ - Transport block size:		4008
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Decoding PDSCH SF: 4, RNTI: 0x1234, Mod QPSK, TBS: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0, C_prb=25
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300, n_iters=1
+[INFO]:  END CB#1: wp: 4032, rp: 6300
+[INFO]:  TB decoded OK
+[INFO]:  Reading 5760 samples. sf_idx = 5
+[INFO]:  Attempting DL decode SFN=0
+[INFO]:  Decoded CFI=3 with correlation 32.00, sf_idx=5
+[INFO]:  Searching DL C-RNTI in 16 ue locations, 2 formats
+[INFO]:  Searching DL C-RNTI in 6 ue locations, format 1A
+[INFO]:  Reading 5760 samples. sf_idx = 6s: 20.00%, PDSCH-BLER:  0.00%
+[INFO]:  Attempting DL decode SFN=0
+[INFO]:  Decoded CFI=3 with correlation 32.00, sf_idx=6
+[INFO]:  Searching DL C-RNTI in 16 ue locations, 2 formats
+ - Resource Allocation Type:		Type 0
+   + Resource Block Group Size:		2
+   + RBG Bitmap:			0x1fff
+ - Modulation and coding scheme index:	9
+ - HARQ process:			0
+ - New data indicator:			No
+ - Redundancy version:			0
+ - TPC command for PUCCH:		--
+ - PRB Bitmap Assignment 0st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - PRB Bitmap Assignment 1st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - Number of PRBs:			25
+ - Modulation type:			QPSK
+ - Transport block size:		4008
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Decoding PDSCH SF: 6, RNTI: 0x1234, Mod QPSK, TBS: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0, C_prb=25
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300, n_iters=1
+[INFO]:  END CB#1: wp: 4032, rp: 6300
+[INFO]:  TB decoded OK
+[INFO]:  Reading 5760 samples. sf_idx = 7
+[INFO]:  Attempting DL decode SFN=0
+[INFO]:  Decoded CFI=3 with correlation 32.00, sf_idx=7
+[INFO]:  Searching DL C-RNTI in 16 ue locations, 2 formats
+ - Resource Allocation Type:		Type 0
+   + Resource Block Group Size:		2
+   + RBG Bitmap:			0x1fff
+ - Modulation and coding scheme index:	9
+ - HARQ process:			0
+ - New data indicator:			No
+ - Redundancy version:			0
+ - TPC command for PUCCH:		--
+ - PRB Bitmap Assignment 0st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - PRB Bitmap Assignment 1st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - Number of PRBs:			25
+ - Modulation type:			QPSK
+ - Transport block size:		4008
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Decoding PDSCH SF: 7, RNTI: 0x1234, Mod QPSK, TBS: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0, C_prb=25
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300, n_iters=1
+[INFO]:  END CB#1: wp: 4032, rp: 6300
+[INFO]:  TB decoded OK
+[INFO]:  Reading 5760 samples. sf_idx = 8
+[INFO]:  Attempting DL decode SFN=0
+[INFO]:  Decoded CFI=3 with correlation 32.00, sf_idx=8
+[INFO]:  Searching DL C-RNTI in 16 ue locations, 2 formats
+ - Resource Allocation Type:		Type 0
+   + Resource Block Group Size:		2
+   + RBG Bitmap:			0x1fff
+ - Modulation and coding scheme index:	9
+ - HARQ process:			0
+ - New data indicator:			No
+ - Redundancy version:			0
+ - TPC command for PUCCH:		--
+ - PRB Bitmap Assignment 0st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - PRB Bitmap Assignment 1st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - Number of PRBs:			25
+ - Modulation type:			QPSK
+ - Transport block size:		4008
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Decoding PDSCH SF: 8, RNTI: 0x1234, Mod QPSK, TBS: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0, C_prb=25
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300, n_iters=1
+[INFO]:  END CB#1: wp: 4032, rp: 6300
+[INFO]:  TB decoded OK
+[INFO]:  Reading 5760 samples. sf_idx = 9
+[INFO]:  Attempting DL decode SFN=0
+[INFO]:  Decoded CFI=3 with correlation 32.00, sf_idx=9
+[INFO]:  Searching DL C-RNTI in 16 ue locations, 2 formats
+ - Resource Allocation Type:		Type 0
+   + Resource Block Group Size:		2
+   + RBG Bitmap:			0x1fff
+ - Modulation and coding scheme index:	9
+ - HARQ process:			0
+ - New data indicator:			No
+ - Redundancy version:			0
+ - TPC command for PUCCH:		--
+ - PRB Bitmap Assignment 0st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - PRB Bitmap Assignment 1st slot:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 
+ - Number of PRBs:			25
+ - Modulation type:			QPSK
+ - Transport block size:		4008
+[INFO]:  CB Segmentation: TBS: 4008, C=1, C+=1 K+=4032, C-=0, K-=0, F=0, Bp=4032
+[INFO]:  Decoding PDSCH SF: 9, RNTI: 0x1234, Mod QPSK, TBS: 4008, NofSymbols: 3150, NofBitsE: 6300, rv_idx: 0, C_prb=25
+[INFO]:  CB#0: cb_len: 4032, rlen: 4032, wp: 0, rp: 0, E: 6300, n_iters=1
+[INFO]:  END CB#1: wp: 4032, rp: 6300
+[INFO]:  TB decoded OK
+Hangup
