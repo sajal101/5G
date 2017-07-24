@@ -1,0 +1,1526 @@
+pc203:~> cd /usr/local/src/flexran_controller
+pc203:/usr/local/src/flexran_controller>  ./start_controller.sh
+Looking for agent interface...
+Found interface (eth2). Now setting address for agent communication
+
+Measuring agent node latency...
+Finished
+Schedule ahead time for scheduler should be 0 ms
+Starting controller...
+Now listening on http://0.0.0.0:9999Seems that a new connection was established
+Time to handle a hello msg
+Handled it
+Got an eNB config reply msg
+Got a UE config reply msg
+Got an LC config reply msg
+Time to make a new request for stats
+Seems like a UE state changed
+Got an LC config reply msg
+flexran-agent:~> cd /usr/local/src/flexran
+flexran-agent:/usr/local/src/flexran> ./start_enb_agent.sh
+Enter your password:
+Agent cache was not mounted
+Mounting...
+Mount success
+Permission denied (publickey).
+[INFO]: Flushed states in MME.
+sshpass: Failed to run command: No such file or directory
+[INFO]: Flushed states in SGW.
+Permission denied (publickey).
+[INFO]: Flushed states in PGW.
+linux; GNU C++ version 4.8.4; Boost_105400; UHD_003.010.001.000-release
+
+# /dev/cpu_dma_latency set to 0us
+log init done
+num component carrier 1 
+WARNING: setting 'gtpu_log_level' not found in configuration file
+WARNING: setting 'gtpu_log_verbosity' not found in configuration file
+WARNING: setting 'udp_log_level' not found in configuration file
+WARNING: setting 'udp_log_verbosity' not found in configuration file
+WARNING: setting 'osa_log_level' not found in configuration file
+WARNING: setting 'osa_log_verbosity' not found in configuration file
+
+----------------------------------------------------------------------
+ ENB CONFIG FILE CONTENT LOADED (TBC):
+----------------------------------------------------------------------
+ENB CONFIG for instance 0:
+
+	eNB name:           	eNB_Eurecom_LTEBox:
+	eNB ID:             	7:
+	Cell type:          	CELL_MACRO_ENB:
+	TAC:                	1:
+	MCC:                	998:
+	MNC:                	98:
+
+FLEXRAN AGENT CONFIG : 
+
+	Interface name:           	eth1:2:
+	Interface IP Address:     	192.168.100.106:
+	Interface PORT:           	2210:
+
+	Cache directory:          	/mnt/oai_agent_cache:
+
+	node_function for CC 0:      	eNodeB_3GPP:
+	node_timing for CC 0:        	synch_to_ext_device:
+	node_synch_ref for CC 0:     	0:
+	eutra band for CC 0:         	4:
+	downlink freq for CC 0:      	2132500000:
+	uplink freq offset for CC 0: 	-400000000:
+
+	Cell ID for CC 0:	0:
+	N_RB_DL for CC 0:	50:
+	nb_antenna_ports for CC 0:	1:
+	nb_antennas_tx for CC 0:	1:
+	nb_antennas_rx for CC 0:	1:
+	rach_numberOfRA_Preambles for CC 0:	15:
+	rach_preamblesGroupAConfig for CC 0:	0:
+	rach_powerRampingStep for CC 0:	2:
+	rach_preambleInitialReceivedTargetPower for CC 0:	8:
+	rach_preambleTransMax for CC 0:	6:
+	rach_raResponseWindowSize for CC 0:	7:
+	rach_macContentionResolutionTimer for CC 0:	5:
+	rach_maxHARQ_Msg3Tx for CC 0:	4:
+	bcch_modificationPeriodCoeff for CC 0:	0:
+	pcch_defaultPagingCycle for CC 0:	2:
+	pcch_nB for CC 0:	2:
+	prach_root for CC 0:	0:
+	prach_config_index for CC 0:	0:
+	prach_high_speed for CC 0:	0:
+	prach_zero_correlation for CC 0:	1:
+	prach_freq_offset for CC 0:	2:
+	pdsch_referenceSignalPower for CC 0:	-24:
+	pdsch_p_b for CC 0:	0:
+	pusch_n_SB for CC 0:	1:
+	pusch_hoppingMode for CC 0:	0:
+	pusch_hoppingOffset for CC 0:	0:
+	pusch_enable64QAM for CC 0:	0:
+	pusch_groupHoppingEnabled for CC 0:	1:
+	pusch_groupAssignment for CC 0:	0:
+	pusch_sequenceHoppingEnabled for CC 0:	0:
+	pusch_nDMRS1 for CC 0:	1:
+	pucch_delta_shift for CC 0:	0:
+	pucch_nRB_CQI for CC 0:	1:
+	pucch_nCS_AN for CC 0:	0:
+	srs_enable for CC 0:	0:
+	pusch_p0_Nominal for CC 0:	-96:
+	pucch_p0_Nominal for CC 0:	-103:
+	pusch_alpha for CC 0:	7:
+	pucch_deltaF_Format1 for CC 0:	2:
+	pucch_deltaF_Format1b for CC 0:	1:
+	pucch_deltaF_Format2 for CC 0:	1:
+	pucch_deltaF_Format2a for CC 0:	1:
+	pucch_deltaF_Format2b for CC 0:	1:
+	msg3_delta_Preamble for CC 0:	6:
+	ul_CyclicPrefixLength for CC 0:	0:
+	ue_TimersAndConstants_t300 for CC 0:	5:
+	ue_TimersAndConstants_t301 for CC 0:	5:
+	ue_TimersAndConstants_t310 for CC 0:	5:
+	ue_TimersAndConstants_n310 for CC 0:	7:
+	ue_TimersAndConstants_t311 for CC 0:	3:
+	ue_TimersAndConstants_n311 for CC 0:	0:
+	ue_TransmissionMode for CC 0:	0:
+
+	Global log level:  	info
+	HW log level:      	info
+	PHY log level:     	info
+	MAC log level:     	info
+	RLC log level:     	info
+	PDCP log level:    	info
+	RRC log level:     	info
+	UDP log level:     	info
+	GTP log level:     	info
+	OSA log level:     	info
+
+--------------------------------------------------------
+Downlink frequency/ uplink offset of CC_id 0 set to 2132500000/-400000000
+configuring for eNB
+CPU Freq is 2.294851 
+reported resolution = 1 ns
+[PHY][I]Initializing frame parms for N_RB_DL 50, Ncp 0, osf 1
+lte_parms.c: Setting N_RB_DL to 50, ofdm_symbol_size 1024
+[PHY][I][eNB 0] Initializing DL_FRAME_PARMS : N_RB_DL 50, PHICH Resource 1, PHICH Duration 0
+pcfich_reg : 0,25,50,75
+Ngroup_PHICH 2 (phich_config_common.phich_resource 1,phich_config_common.phich_duration normal, NidCell 0,Ncp 0, frame_type 0), smallest pcfich REG 0, n0 96, n1 150 (first PHICH REG 0)
+phich_reg :0 => 1,34,67
+phich_reg :1 => 2,35,68
+[PHY][I]init eNB: Nid_cell 0
+[PHY][I]init eNB: frame_type 0,tdd_config 3
+[PHY][I]init eNB: number of ue max 16 number of enb max 1 number of harq pid max 8
+[PHY][I]init eNB: N_RB_DL 50
+[PHY][I]init eNB: prach_config_index 0
+CPU Freq is 2.294854 
+frame_parms->N_RB_DL=50
+frame_parms->N_RB_UL=50
+frame_parms->Nid_cell=0
+frame_parms->Ncp=0
+frame_parms->Ncp_UL=0
+frame_parms->nushift=0
+frame_parms->frame_type=0
+frame_parms->tdd_config=3
+frame_parms->tdd_config_S=0
+frame_parms->mode1_flag=1
+frame_parms->nb_antennas_tx_eNB(nb_antenna_ports)=1
+frame_parms->nb_antennas_tx=1
+frame_parms->nb_antennas_rx=1
+frame_parms->ofdm_symbol_size=1024
+frame_parms->nb_prefix_samples=72
+frame_parms->nb_prefix_samples0=80
+frame_parms->first_carrier_offset=724
+frame_parms->samples_per_tti=15360
+frame_parms->symbols_per_tti=14
+HW: Configuring card 0, nb_antennas_tx/rx 1/1
+Card 0, channel 0, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 2132500000.000000, rx_freq 1732500000.000000
+Card 0, channel 1, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 0, channel 2, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 0, channel 3, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+HW: Configuring card 1, nb_antennas_tx/rx 1/1
+Card 1, channel 0, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 2132500000.000000, rx_freq 1732500000.000000
+Card 1, channel 1, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 1, channel 2, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 1, channel 3, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+HW: Configuring card 2, nb_antennas_tx/rx 1/1
+Card 2, channel 0, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 2132500000.000000, rx_freq 1732500000.000000
+Card 2, channel 1, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 2, channel 2, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 2, channel 3, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+HW: Configuring card 3, nb_antennas_tx/rx 1/1
+Card 3, channel 0, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 2132500000.000000, rx_freq 1732500000.000000
+Card 3, channel 1, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 3, channel 2, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 3, channel 3, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+HW: Configuring card 4, nb_antennas_tx/rx 1/1
+Card 4, channel 0, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 2132500000.000000, rx_freq 1732500000.000000
+Card 4, channel 1, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 4, channel 2, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 4, channel 3, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+HW: Configuring card 5, nb_antennas_tx/rx 1/1
+Card 5, channel 0, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 2132500000.000000, rx_freq 1732500000.000000
+Card 5, channel 1, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 5, channel 2, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 5, channel 3, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+HW: Configuring card 6, nb_antennas_tx/rx 1/1
+Card 6, channel 0, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 2132500000.000000, rx_freq 1732500000.000000
+Card 6, channel 1, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 6, channel 2, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 6, channel 3, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+HW: Configuring card 7, nb_antennas_tx/rx 1/1
+Card 7, channel 0, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 2132500000.000000, rx_freq 1732500000.000000
+Card 7, channel 1, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 7, channel 2, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+Card 7, channel 3, Setting tx_gain 0.000000, rx_gain 0.000000, tx_freq 0.000000, rx_freq 0.000000
+[HW][I]CPU Affinity of main() function is...  CPU_0  CPU_1  CPU_2  CPU_3 
+[PHY][I]Intializing L2
+[MAC][I][l2_init] [MAIN] MAC_INIT_GLOBAL_PARAM IN...
+[MAC][I][mac_init_global_param] [MAIN] CALLING RLC_MODULE_INIT...
+[MAC][I][mac_init_global_param] [MAIN] RLC_MODULE_INIT OK, malloc16 for mac_rlc_xface...
+[MAC][I][mac_init_global_param] [MAIN] malloc16 OK, mac_rlc_xface @ 0x19feaa20
+[MAC][I][mac_init_global_param] [MAIN] RLC interface setup and init
+[PDCP][I]PDCP layer has been initialized
+[MAC][I][mac_init_global_param] [MAIN] Init Global Param Done
+[MAC][I][l2_init] [MAIN] init eNB MAC functions  
+[MAC][I][l2_init] [MAIN] init UE MAC functions 
+[MAC][I][l2_init] [MAIN] PHY Frame configuration 
+[MAC][I][mac_top_init] [MAIN] Init function start:Nb_UE_INST=0
+[MAC][I][mac_top_init] [MAIN] Init function start:Nb_eNB_INST=1
+[MAC][I][mac_top_init] [MAIN] calling RRC
+[RRC][I][eNB] handover active state is 0 
+[RRC][I][eNB] eMBMS active state is 0 
+[MAC][I][mac_top_init] [MAIN][INIT] Init function finished
+[SCTP][I][sctp_eNB_task] Starting SCTP layer
+[S1AP][I][s1ap_eNB_task] Starting S1AP layer
+[UDP][I]Initializing UDP task interface
+[UDP][I]Initializing UDP task interface: DONE
+[GTPV1U][I]Initializing GTPU stack 0xf1c0a0
+ITTI tasks created
+Wait for the ITTI initialize message
+
+ start enb agent 0
+[FLEXRAN_AGENT][I]starting enb agent client for module id 0 on ipv4 192.168.100.106, port 2210
+[FLEXRAN_AGENT][I]init RB tree for channel container
+[FLEXRAN_AGENT][I]starting enb agent client for module id 0 on ipv4 192.168.100.106, port 2210
+[FLEXRAN_AGENT][I]Created a new channel with id 0x7f5b00000001
+[UDP][I]Initializing UDP for local address 192.168.4.100 with port 2152
+[UDP][I]Inserting new descriptor for task 11, sd 39
+[UDP][I]Initializing UDP for local address 192.168.4.100 with port 2152: DONE
+[FLEXRAN_AGENT][I]init RB tree
+[RRC][I][eNB 0] Received RRC_CONFIGURATION_REQ
+[FLEXRAN_AGENT][I]client ends
+[ENB_APP][I][eNB_app_register] [eNB 0] eNB_app_register for instance 0
+[S1AP][I][s1ap_eNB_handle_register_eNB] Registered new eNB[0] and macro eNB id 7
+[S1AP][I][s1ap_eNB_register_mme] [eNB 0] check the mme registration state
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI 0] Init...
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI 0] Checking release 
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI 0] Rel10 RRC detected, MBMS flag 0
+[RRC][I][eNB 0] Configuration SIB2/3, MBMS = 0
+[MAC][I][rrc_mac_config_req] [CONFIG][eNB 0/0] Configuring MAC/PHY
+[MAC][I][rrc_mac_config_req] [CONFIG]SIB2/3 Contents (partial)
+[MAC][I][rrc_mac_config_req] [CONFIG]pusch_config_common.n_SB = 1
+[MAC][I][rrc_mac_config_req] [CONFIG]pusch_config_common.hoppingMode = 0
+[MAC][I][rrc_mac_config_req] [CONFIG]pusch_config_common.pusch_HoppingOffset = 0
+[MAC][I][rrc_mac_config_req] [CONFIG]pusch_config_common.enable64QAM = 0
+[MAC][I][rrc_mac_config_req] [CONFIG]pusch_config_common.groupHoppingEnabled = 1
+[MAC][I][rrc_mac_config_req] [CONFIG]pusch_config_common.groupAssignmentPUSCH = 0
+[MAC][I][rrc_mac_config_req] [CONFIG]pusch_config_common.sequenceHoppingEnabled = 0
+[MAC][I][rrc_mac_config_req] [CONFIG]pusch_config_common.cyclicShift  = 1
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI 0] OPENAIR RRC IN....
+[SCTP][I][sctp_handle_new_association_req] sctp_bindx SCTP_BINDX_ADD_ADDR socket bound to : 192.168.4.100
+[SCTP][I][sctp_handle_new_association_req] Converted ipv4 address 192.168.4.80 to network type
+[SCTP][I][sctp_handle_new_association_req] connectx assoc_id  1 in progress..., used 1 addresses
+[SCTP][I][sctp_handle_new_association_req] Inserted new descriptor for sd 40 in list, nb elements 1, assoc_id 1
+[SCTP][I][sctp_eNB_flush_sockets] Found data for descriptor 40
+[SCTP][I][sctp_eNB_read_from_socket] Received notification for sd 40, type 32769
+[SCTP][I][sctp_eNB_read_from_socket] Client association changed: 0
+[SCTP][I][sctp_get_peeraddresses] ----------------------
+[SCTP][I][sctp_get_peeraddresses] Peer addresses:
+[SCTP][I][sctp_get_peeraddresses]     - [192.168.4.80]
+[SCTP][I][sctp_get_peeraddresses] ----------------------
+[SCTP][I][sctp_get_sockinfo] ----------------------
+[SCTP][I][sctp_get_sockinfo] SCTP Status:
+[SCTP][I][sctp_get_sockinfo] assoc id .....: 1
+[SCTP][I][sctp_get_sockinfo] state ........: 4
+[SCTP][I][sctp_get_sockinfo] instrms ......: 2
+[SCTP][I][sctp_get_sockinfo] outstrms .....: 2
+[SCTP][I][sctp_get_sockinfo] fragmentation : 1452
+[SCTP][I][sctp_get_sockinfo] pending data .: 0
+[SCTP][I][sctp_get_sockinfo] unack data ...: 0
+[SCTP][I][sctp_get_sockinfo] rwnd .........: 114688
+[SCTP][I][sctp_get_sockinfo] peer info     :
+[SCTP][I][sctp_get_sockinfo]     state ....: 2
+[SCTP][I][sctp_get_sockinfo]     cwnd .....: 4380
+[SCTP][I][sctp_get_sockinfo]     srtt .....: 0
+[SCTP][I][sctp_get_sockinfo]     rto ......: 3000
+[SCTP][I][sctp_get_sockinfo]     mtu ......: 1500
+[SCTP][I][sctp_get_sockinfo] ----------------------
+[SCTP][I][sctp_eNB_read_from_socket] Comm up notified for sd 40, assigned assoc_id 1
+[S1AP][I][s1ap_eNB_generate_s1_setup_request] 7 -> 000070
+[SCTP][I][sctp_send_data] Successfully sent 59 bytes on stream 0 for assoc_id 1
+[SCTP][I][sctp_eNB_flush_sockets] Found data for descriptor 40
+[SCTP][I][sctp_eNB_read_from_socket] Received notification for sd 40, type 32777
+[SCTP][I][sctp_eNB_flush_sockets] Found data for descriptor 40
+[SCTP][I][sctp_eNB_read_from_socket] [1][40] Msg of length 27 received from port 36412, on stream 0, PPID 18
+[S1AP][I][s1ap_decode_s1ap_s1setupresponseies] Decoding message S1ap_S1SetupResponseIEs (/usr/local/src/flexran/openairinterface5g/cmake_targets/lte_build_oai/build/CMakeFiles/R10.5/s1ap_decoder.c:3535)
+[S1AP][I][s1ap_eNB_handle_s1_setup_response] servedGUMMEIs.list.count 1
+[S1AP][I][s1ap_eNB_handle_s1_setup_response] servedPLMNs.list.count 1
+[ENB_APP][I][eNB_app_task] [eNB 0] Received S1AP_REGISTER_ENB_CNF: associated MME 1
+[PHY][I]Initializing eNB 0 CC_id 0 : (eNodeB_3GPP,synch_to_ext_device)
+-- Loading firmware image: /usr/share/uhd/images/usrp_b200_fw.hex...
+Checking for USRPs : UHD 003.010.001.000-release (3.10.1)
+Found USRP B200-- Detected Device: B210
+-- Loading FPGA image: /usr/share/uhd/images/usrp_b210_fpga.bin... 53%Permission denied (publickey).
+ done
+-- Operating over USB 3.
+-- Detecting internal GPSDO.... No GPSDO found
+-- Initialize CODEC control...
+-- Initialize Radio control...
+-- Performing register loopback test... pass
+-- Performing register loopback test... pass
+-- Performing CODEC loopback test... pass
+-- Performing CODEC loopback test... pass
+-- Setting master clock rate selection to 'automatic'.
+-- Asking for clock rate 16.000000 MHz... 
+-- Actually got clock rate 16.000000 MHz.
+-- Performing timer loopback test... pass
+-- Performing timer loopback test... pass
+-- Setting master clock rate selection to 'manual'.
+-- Asking for clock rate 30.720000 MHz... 
+-- Actually got clock rate 30.720000 MHz.
+-- Performing timer loopback test... pass
+-- Performing timer loopback test... pass
+cal 0: freq 3500000000.000000, offset 44.000000, diff 1767500000.000000
+cal 1: freq 2660000000.000000, offset 49.800000, diff 927500000.000000
+cal 2: freq 2300000000.000000, offset 51.000000, diff 567500000.000000
+cal 3: freq 1880000000.000000, offset 53.000000, diff 147500000.000000
+cal 4: freq 816000000.000000, offset 57.000000, diff 916500000.000000
+RX Gain 0 125.000000 (56.000000) => 69.000000 (max 76.000000)
+Actual master clock: 30.720000MHz...
+rx_max_num_samps 3836
+tx_max_num_samps 3836
+Setting tx freq/gain on channel 0/2: BW 20.000000 (readback 20.000000)
+Setting rx freq/gain on channel 0/2 : BW 20.000000 (readback 20.000000)
+RX Channel 0
+Actual RX sample rate: 15.360000MSps...
+Actual RX frequency: 1.732500GHz...
+Actual RX gain: 69.000000...
+Actual RX bandwidth: 20.000000M...
+Actual RX antenna: RX2...
+TX Channel 0
+
+Actual TX sample rate: 15.360000MSps...
+Actual TX frequency: 2.132500GHz...
+Actual TX gain: 89.750000...
+Actual TX bandwidth: 20.000000M...
+Actual TX antenna: TX/RX...
+Device timestamp: 0.000472...
+[RRH] has loaded USRP B200 device.
+setup_eNB_buffers: frame_parms = 0x7f5b6acd2698
+rxdata[0] @ 0x1a067660 (0x1a067660) (N_TA_OFFSET 0)
+txdata[0] @ 0x1a0fd6e0
+[PHY][I]Initializing eNB 0 CC_id 0 (eNodeB_3GPP,synch_to_ext_device),
+[HW][I][SCHED][eNB] eNB_thread_single started on CPU 0 TID 1923, sched_policy = SCHED_FIFO , priority = 99, CPU Affinity= CPU_0 CPU_1 CPU_2 CPU_3 
+Creating te_thread
+waiting for sync (eNB_thread_single)
+[HW][I][SCHED][eNB] eNB_thread_prach started on CPU 0 TID 1927, sched_policy = SCHED_FIFO , priority = 99, CPU Affinity= CPU_0 CPU_1 CPU_2 CPU_3 
+Setting eNB buffer to all-RX
+Sending sync to all threads
+TYPE <CTRL-C> TO TERMINATE
+Entering ITTI signals handler
+got sync (eNB_thread_single)
+[PHY][I][eNB 0][RAPROC] Frame 739 Terminating ra_proc for harq 4, UE 0
+[MAC][I][rx_sdu] [eNB 0][RAPROC] CC_id 0 Frame 739, Received CCCH:  42.d0.0.0.0.26, Terminating RA procedure for UE rnti ef54
+[MAC][I][rx_sdu] [eNB 0][RAPROC] CC_id 0 Frame 739 CCCH: Received Msg3: length 6, offset 3
+[MAC][I][rx_sdu] [eNB 0][RAPROC] CC_id 0 Frame 739 Added user with rnti ef54 => UE 0
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI ef54] Received RRC_MAC_CCCH_DATA_IND
+[MAC][I][schedule_ulsch_rnti] [eNB 0] frame 740 subfarme 0, UE 0: not configured, skipping UE scheduling 
+[RRC][I] S-TMSI doesn't exist, setting Initialue_identity_s_TMSI.m_tmsi to 0 => 2
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI ef54] Accept new connection from UE random UE identity (0xffffffff) MME code 45 TMSI 2 cause 3
+[MAC][I][rrc_mac_config_req] [CONFIG][eNB 0/0] Configuring MAC/PHY for UE 0 (ef54)
+[PHY][I]phy_config_dedicated_eNB: physicalConfigDedicated=0x7f5b1c0017c0
+[PHY][I]Transmission Mode (phy_config_dedicated_eNB) 1
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI ef54] [RAPROC] Logical Channel DL-CCCH, Generating RRCConnectionSetup (bytes 25)
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI ef54]CALLING RLC CONFIG SRB1 (rbid 1)
+[PDCP][N][FRAME 00000][eNB][MOD 00][RNTI ef54][SRB 01]  Action ADD  LCID 1 (SRB id 1) configured with SN size 5 bits and RLC AM
+[RLC][I][FRAME 00000][eNB][MOD 00][RNTI ef54] [SRB 1] rrc_rlc_add_rlc  SRB
+[RLC][I][FRAME 00000][eNB][MOD 00][RNTI ef54][SRB AM 01][CONFIGURE] max_retx_threshold 4 poll_pdu 4 poll_byte 10000 t_poll_retransmit 80 t_reordering 35 t_status_prohibit 0
+[MAC][I][schedule_ulsch_rnti] [eNB 0] frame 740 subfarme 1, UE 0: not configured, skipping UE scheduling 
+[PHY][I][eNB 0] Frame 469768128: Sent physicalConfigDedicated=(nil) for UE -1506657024
+[MAC][I][schedule_ulsch_rnti] [eNB 0] frame 740 subfarme 2, UE 0: not configured, skipping UE scheduling 
+[MAC][I][schedule_ulsch_rnti] [eNB 0] frame 740 subfarme 3, UE 0: not configured, skipping UE scheduling 
+[MAC][I][schedule_ulsch_rnti] [eNB 0] frame 740 subfarme 4, UE 0: not configured, skipping UE scheduling 
+[MAC][I][schedule_RA] [eNB 0][RAPROC] CC_id 0 Frame 740, subframeP 5: Generating Msg4 with RRC Piggyback (RA proc 0, RNTI ef54)
+[MAC][I][schedule_RA] [eNB 0][RAPROC] CC_id 0 Frame 740 subframeP 5 Msg4 : TBS 41, sdu_len 25, msg4_header 8, msg4_padding 0, msg4_post_padding 7
+[MAC][I][schedule_ulsch_rnti] [eNB 0] frame 740 subfarme 5, UE 0: not configured, skipping UE scheduling 
+[MAC][I][schedule_ulsch_rnti] [eNB 0] frame 740 subfarme 6, UE 0: not configured, skipping UE scheduling 
+[MAC][I][schedule_ulsch_rnti] [eNB 0] frame 740 subfarme 7, UE 0: not configured, skipping UE scheduling 
+[MAC][I][schedule_ulsch_rnti] [eNB 0] frame 740 subfarme 8, UE 0: not configured, skipping UE scheduling 
+[MAC][I][schedule_ulsch_rnti] [eNB 0] frame 740 subfarme 9, UE 0: not configured, skipping UE scheduling 
+[MAC][I][schedule_RA] [eNB 0][RAPROC] CC_id 0 Frame 741, subframeP 0: Checking if Msg4 was acknowledged: 
+[MAC][I][schedule_RA] [eNB 0][RAPROC] CC_id 0 Frame 741, subframeP 0 : Msg4 acknowledged
+[MAC][I][schedule_ulsch_rnti] [eNB 0][PUSCH 6/ef54] CC_id 0 Frame 741 subframeP 0 Scheduled UE 0 (mcs 10, first rb 7, nb_rb 6, rb_table_index 5, TBS 129, harq_pid 6)
+[MAC][I][SR_indication] [eNB 0][SR ef54] Frame 740 subframeP 9 Signaling SR for UE 0 on CC_id 0
+[MAC][I][schedule_ulsch_rnti] [eNB 0][PUSCH 1/ef54] CC_id 0 Frame 741 subframeP 3 Scheduled UE 0 (mcs 10, first rb 7, nb_rb 6, rb_table_index 5, TBS 129, harq_pid 1)
+[MAC][I][rx_sdu] [eNB 0] CC_id 0 MAC CE_LCID 29 : ul_total_buffer = 0 (lcg increment 0)
+[RRC][N][eNB 0] Frame 741: received a DCCH 1 message on SRB 1 with Size 58 from UE ef54
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI ef54] Received on DCCH 1 RRC_DCCH_DATA_IND
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI ef54] [RAPROC] Logical Channel UL-DCCH, processing RRCConnectionSetupComplete from UE (SRB1 Active)
+[S1AP][I][rrc_eNB_send_S1AP_NAS_FIRST_REQ] [eNB 0] Build S1AP_NAS_FIRST_REQ with s_TMSI: MME code 45 M-TMSI 2 ue ef54
+[S1AP][I][s1ap_eNB_handle_nas_first_req] Found usable eNB_ue_s1ap_id: 0x06692d 420141(10)
+[S1AP][I][s1ap_eNB_handle_nas_first_req] S_TMSI_PRESENT
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI ef54] UE State = RRC_CONNECTED 
+[SCTP][I][sctp_send_data] Successfully sent 112 bytes on stream 1 for assoc_id 1
+[SCTP][I][sctp_eNB_flush_sockets] Found data for descriptor 40
+[SCTP][I][sctp_eNB_read_from_socket] Received notification for sd 40, type 32777
+[SCTP][I][sctp_eNB_flush_sockets] Found data for descriptor 40
+[SCTP][I][sctp_eNB_read_from_socket] [1][40] Msg of length 58 received from port 36412, on stream 0, PPID 18
+[S1AP][I][s1ap_decode_s1ap_downlinknastransporties] Decoding message S1ap_DownlinkNASTransportIEs (/usr/local/src/flexran/openairinterface5g/cmake_targets/lte_build_oai/build/CMakeFiles/R10.5/s1ap_decoder.c:3150)
+[RRC][I][eNB 0] Received S1AP_DOWNLINK_NAS: ue_initial_id 1, eNB_ue_s1ap_id 420141
+[PDCP][I][FRAME 00000][eNB][MOD 00][RNTI ef54]Received RRC_DCCH_DATA_REQ from TASK_RRC_ENB: instance 0, rb_id 1, muiP 0, confirmP 0, mode 1
+[RLC][I][FRAME 00000][eNB][MOD 00][RNTI ef54][SRB AM 01] RLC_AM_DATA_REQ size 38 Bytes,  NB SDU 1 current_sdu_index=0 next_sdu_index=1 conf 0 mui 0
+[RRC][N][eNB 0] Frame 745: received a DCCH 1 message on SRB 1 with Size 11 from UE ef54
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI ef54] Received on DCCH 1 RRC_DCCH_DATA_IND
+[SCTP][I][sctp_send_data] Successfully sent 58 bytes on stream 1 for assoc_id 1
+[SCTP][I][sctp_eNB_flush_sockets] Found data for descriptor 40
+[SCTP][I][sctp_eNB_read_from_socket] Received notification for sd 40, type 32777
+[PHY][I]UE 0 : rnti ef54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti ef54 : in synch
+[RRC][I]UE rnti ef54:S-TMSI 2 failure timer 0/20000
+[PHY][W][eNB 0, CC 0] frame 786, subframe 2, UE 0: ULSCH consecutive error count reached 20, triggering UL Failure
+[MAC][I][UL_failure_indication] [eNB 0][UE 0/ef54] Frame 786 subframeP 2 Signaling UL Failure for UE 0 on CC_id 0 (timer 0)
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE 0 rnti ef54: UL Failure after repeated PDCCH orders: Triggering RRC 
+[RRC][I]Frame 806, Subframe 1: UE ef54 UL failure, activating timer
+[MAC][I][rrc_mac_remove_ue] Removing UE 0 from Primary CC_id 0 (rnti ef54)
+[PHY][I][eNB 0][RAPROC] Frame 859 Terminating ra_proc for harq 4, UE 0
+[MAC][I][rx_sdu] [eNB 0][RAPROC] CC_id 0 Frame 859, Received CCCH:  42.d0.0.0.0.28, Terminating RA procedure for UE rnti 5a54
+[MAC][I][rx_sdu] [eNB 0][RAPROC] CC_id 0 Frame 859 CCCH: Received Msg3: length 6, offset 3
+[MAC][I][rx_sdu] [eNB 0][RAPROC] CC_id 0 Frame 859 Added user with rnti 5a54 => UE 0
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54] Received RRC_MAC_CCCH_DATA_IND
+[MAC][I][schedule_ulsch_rnti] [eNB 0] frame 860 subfarme 0, UE 0: not configured, skipping UE scheduling 
+[RRC][I]checking for UE S-TMSI 2, mme 2d (0x7f5b1c006740): rnti ef54=> S-TMSI 2, MME 2d
+[RRC][I] S-TMSI exists, ue_context_p 0x7f5b1c006740, old rnti ef54 => 5a54
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54] Accept new connection from UE  MME code 45 TMSI 2 cause 4
+[MAC][I][rrc_mac_config_req] [CONFIG][eNB 0/0] Configuring MAC/PHY for UE 0 (5a54)
+[PHY][I]phy_config_dedicated_eNB: physicalConfigDedicated=0x7f5b1c0094e0
+[PHY][I]Transmission Mode (phy_config_dedicated_eNB) 1
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54] [RAPROC] Logical Channel DL-CCCH, Generating RRCConnectionSetup (bytes 25)
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54]CALLING RLC CONFIG SRB1 (rbid 1)
+[PDCP][N][FRAME 00000][eNB][MOD 00][RNTI 5a54][SRB 01]  Action ADD  LCID 1 (SRB id 1) configured with SN size 5 bits and RLC AM
+[RLC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54] [SRB 1] rrc_rlc_add_rlc  SRB
+[RLC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54][SRB AM 01][CONFIGURE] max_retx_threshold 4 poll_pdu 4 poll_byte 10000 t_poll_retransmit 80 t_reordering 35 t_status_prohibit 0
+[MAC][I][schedule_ulsch_rnti] [eNB 0] frame 860 subfarme 1, UE 0: not configured, skipping UE scheduling 
+[PHY][I][eNB 0] Frame 469800160: Sent physicalConfigDedicated=(nil) for UE -1506657024
+[MAC][I][schedule_ulsch_rnti] [eNB 0] frame 860 subfarme 2, UE 0: not configured, skipping UE scheduling 
+[MAC][I][schedule_ulsch_rnti] [eNB 0] frame 860 subfarme 3, UE 0: not configured, skipping UE scheduling 
+[MAC][I][schedule_ulsch_rnti] [eNB 0] frame 860 subfarme 4, UE 0: not configured, skipping UE scheduling 
+[MAC][I][schedule_RA] [eNB 0][RAPROC] CC_id 0 Frame 860, subframeP 5: Generating Msg4 with RRC Piggyback (RA proc 0, RNTI 5a54)
+[MAC][I][schedule_RA] [eNB 0][RAPROC] CC_id 0 Frame 860 subframeP 5 Msg4 : TBS 41, sdu_len 25, msg4_header 8, msg4_padding 0, msg4_post_padding 7
+[MAC][I][schedule_ulsch_rnti] [eNB 0] frame 860 subfarme 5, UE 0: not configured, skipping UE scheduling 
+[MAC][I][schedule_ulsch_rnti] [eNB 0] frame 860 subfarme 6, UE 0: not configured, skipping UE scheduling 
+[MAC][I][schedule_ulsch_rnti] [eNB 0] frame 860 subfarme 7, UE 0: not configured, skipping UE scheduling 
+[MAC][I][schedule_ulsch_rnti] [eNB 0] frame 860 subfarme 8, UE 0: not configured, skipping UE scheduling 
+[MAC][I][schedule_ulsch_rnti] [eNB 0] frame 860 subfarme 9, UE 0: not configured, skipping UE scheduling 
+[MAC][I][schedule_RA] [eNB 0][RAPROC] CC_id 0 Frame 861, subframeP 0: Checking if Msg4 was acknowledged: 
+[MAC][I][schedule_RA] [eNB 0][RAPROC] CC_id 0 Frame 861, subframeP 0 : Msg4 acknowledged
+[RRC][N][eNB 0] Frame 861: received a DCCH 1 message on SRB 1 with Size 7 from UE 5a54
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54] Received on DCCH 1 RRC_DCCH_DATA_IND
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54] [RAPROC] Logical Channel UL-DCCH, processing RRCConnectionSetupComplete from UE (SRB1 Active)
+[S1AP][I][rrc_eNB_send_S1AP_NAS_FIRST_REQ] [eNB 0] Build S1AP_NAS_FIRST_REQ with s_TMSI: MME code 45 M-TMSI 2 ue 5a54
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54] UE State = RRC_CONNECTED 
+[S1AP][I][s1ap_eNB_handle_nas_first_req] Found usable eNB_ue_s1ap_id: 0x6fe0dc 7332060(10)
+[S1AP][I][s1ap_eNB_handle_nas_first_req] S_TMSI_PRESENT
+[SCTP][I][sctp_send_data] Successfully sent 61 bytes on stream 1 for assoc_id 1
+[SCTP][I][sctp_eNB_flush_sockets] Found data for descriptor 40
+[SCTP][I][sctp_eNB_read_from_socket] Received notification for sd 40, type 32777
+[SCTP][I][sctp_eNB_flush_sockets] Found data for descriptor 40
+[SCTP][I][sctp_eNB_read_from_socket] [1][40] Msg of length 103 received from port 36412, on stream 0, PPID 18
+[S1AP][I][s1ap_decode_s1ap_initialcontextsetuprequesties] Decoding message S1ap_InitialContextSetupRequestIEs (/usr/local/src/flexran/openairinterface5g/cmake_targets/lte_build_oai/build/CMakeFiles/R10.5/s1ap_decoder.c:1003)
+[S1AP][E][s1ap_eNB_handle_initial_context_request] [SCTP 1] Received UE-related procedure on stream (0)
+[RRC][I][eNB 0] Received S1AP_INITIAL_CONTEXT_SETUP_REQ: ue_initial_id 2, eNB_ue_s1ap_id 7332060, nb_of_e_rabs 1
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54] rrc_eNB_process_GTPV1U_CREATE_TUNNEL_RESP tunnel (2381986129, 2381986129) bearer UE context index 0, msg index 0, id 5, gtp addr len 4 
+[RRC][I][eNB 0][UE 5a54] Selected security algorithms (380031a0): 0, 2, changed
+[RRC][I][eNB 0][UE 5a54] Saved security key D9506D9433E9A5428DF09CE331D19F068E9FE57F6509E2F0F7406D8C413E6F3C
+
+KeNB:d9506d9433e9a5428df09ce331d19f068e9fe57f6509e2f0f7406d8c413e6f3c
+
+KRRCenc:53950c10b8e717b2ff0c785517e76935bf7617d792ece82ec629846fce615f3e
+
+KRRCint:e9c057741bf40594c39cb5f83bd7d691436fb48ed8478efb3f58678380f83135
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54] Logical Channel DL-DCCH, Generate SecurityModeCommand (bytes 3)
+[PDCP][I][FRAME 00000][eNB][MOD 00][RNTI 5a54]Received RRC_DCCH_DATA_REQ from TASK_RRC_ENB: instance 0, rb_id 1, muiP 0, confirmP 0, mode 1
+[RLC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54][SRB AM 01] RLC_AM_DATA_REQ size 8 Bytes,  NB SDU 1 current_sdu_index=0 next_sdu_index=1 conf 0 mui 0
+[RRC][N][eNB 0] Frame 863: received a DCCH 1 message on SRB 1 with Size 2 from UE 5a54
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54] Received on DCCH 1 RRC_DCCH_DATA_IND
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54] received securityModeComplete on UL-DCCH 1 from UE
+<UL-DCCH-Message>
+    <message>
+        <c1>
+            <securityModeComplete>
+                <rrc-TransactionIdentifier>1</rrc-TransactionIdentifier>
+                <criticalExtensions>
+                    <securityModeComplete-r8>
+                    </securityModeComplete-r8>
+                </criticalExtensions>
+            </securityModeComplete>
+        </c1>
+    </message>
+</UL-DCCH-Message>
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54] Logical Channel DL-DCCH, Generate UECapabilityEnquiry (bytes 3)
+[PDCP][I][FRAME 00000][eNB][MOD 00][RNTI 5a54]Received RRC_DCCH_DATA_REQ from TASK_RRC_ENB: instance 0, rb_id 1, muiP 1, confirmP 0, mode 1
+[RLC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54][SRB AM 01] RLC_AM_DATA_REQ size 8 Bytes,  NB SDU 1 current_sdu_index=1 next_sdu_index=2 conf 0 mui 1
+[RRC][N][eNB 0] Frame 864: received a DCCH 1 message on SRB 1 with Size 64 from UE 5a54
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54] Received on DCCH 1 RRC_DCCH_DATA_IND
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54] received ueCapabilityInformation on UL-DCCH 1 from UE
+<UL-DCCH-Message>
+    <message>
+        <c1>
+            <ueCapabilityInformation>
+                <rrc-TransactionIdentifier>2</rrc-TransactionIdentifier>
+                <criticalExtensions>
+                    <c1>
+                        <ueCapabilityInformation-r8>
+                            <ue-CapabilityRAT-ContainerList>
+                                <UE-CapabilityRAT-Container>
+                                    <rat-Type><eutra/></rat-Type>
+                                    <ueCapabilityRAT-Container>
+                                        C5 A0 00 06 00 08 30 84 09 18 0D 1B F9 5F FE 37 
+                                        F2 BF FC 6F E5 7F F8 DF CA FF F1 BF 95 FF E3 7F 
+                                        2B FF C6 FE 57 FF 5D 0F FC 84 88 30 02 32 14 F0 
+                                        41 94 E9 52 44 FC 0B 10 00 00 00 00
+                                    </ueCapabilityRAT-Container>
+                                </UE-CapabilityRAT-Container>
+                            </ue-CapabilityRAT-ContainerList>
+                        </ueCapabilityInformation-r8>
+                    </c1>
+                </criticalExtensions>
+            </ueCapabilityInformation>
+        </c1>
+    </message>
+</UL-DCCH-Message>
+<UE-EUTRA-Capability>
+    <accessStratumRelease><rel9/></accessStratumRelease>
+    <ue-Category>4</ue-Category>
+    <pdcp-Parameters>
+        <supportedROHC-Profiles>
+            <profile0x0001><false/></profile0x0001>
+            <profile0x0002><false/></profile0x0002>
+            <profile0x0003><false/></profile0x0003>
+            <profile0x0004><false/></profile0x0004>
+            <profile0x0006><false/></profile0x0006>
+            <profile0x0101><false/></profile0x0101>
+            <profile0x0102><false/></profile0x0102>
+            <profile0x0103><false/></profile0x0103>
+            <profile0x0104><false/></profile0x0104>
+        </supportedROHC-Profiles>
+        <maxNumberROHC-ContextSessions><cs2/></maxNumberROHC-ContextSessions>
+    </pdcp-Parameters>
+    <phyLayerParameters>
+        <ue-TxAntennaSelectionSupported><false/></ue-TxAntennaSelectionSupported>
+        <ue-SpecificRefSigsSupported><false/></ue-SpecificRefSigsSupported>
+    </phyLayerParameters>
+    <rf-Parameters>
+        <supportedBandListEUTRA>
+            <SupportedBandEUTRA>
+                <bandEUTRA>1</bandEUTRA>
+                <halfDuplex><false/></halfDuplex>
+            </SupportedBandEUTRA>
+            <SupportedBandEUTRA>
+                <bandEUTRA>2</bandEUTRA>
+                <halfDuplex><false/></halfDuplex>
+            </SupportedBandEUTRA>
+            <SupportedBandEUTRA>
+                <bandEUTRA>4</bandEUTRA>
+                <halfDuplex><false/></halfDuplex>
+            </SupportedBandEUTRA>
+            <SupportedBandEUTRA>
+                <bandEUTRA>5</bandEUTRA>
+                <halfDuplex><false/></halfDuplex>
+            </SupportedBandEUTRA>
+            <SupportedBandEUTRA>
+                <bandEUTRA>17</bandEUTRA>
+                <halfDuplex><false/></halfDuplex>
+            </SupportedBandEUTRA>
+            <SupportedBandEUTRA>
+                <bandEUTRA>19</bandEUTRA>
+                <halfDuplex><false/></halfDuplex>
+            </SupportedBandEUTRA>
+            <SupportedBandEUTRA>
+                <bandEUTRA>25</bandEUTRA>
+                <halfDuplex><false/></halfDuplex>
+            </SupportedBandEUTRA>
+        </supportedBandListEUTRA>
+    </rf-Parameters>
+    <measParameters>
+        <bandListEUTRA>
+            <BandInfoEUTRA>
+                <interFreqBandList>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                </interFreqBandList>
+                <interRAT-BandList>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                </interRAT-BandList>
+            </BandInfoEUTRA>
+            <BandInfoEUTRA>
+                <interFreqBandList>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                </interFreqBandList>
+                <interRAT-BandList>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                </interRAT-BandList>
+            </BandInfoEUTRA>
+            <BandInfoEUTRA>
+                <interFreqBandList>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                </interFreqBandList>
+                <interRAT-BandList>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                </interRAT-BandList>
+            </BandInfoEUTRA>
+            <BandInfoEUTRA>
+                <interFreqBandList>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                </interFreqBandList>
+                <interRAT-BandList>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                </interRAT-BandList>
+            </BandInfoEUTRA>
+            <BandInfoEUTRA>
+                <interFreqBandList>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                </interFreqBandList>
+                <interRAT-BandList>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                </interRAT-BandList>
+            </BandInfoEUTRA>
+            <BandInfoEUTRA>
+                <interFreqBandList>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                </interFreqBandList>
+                <interRAT-BandList>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                </interRAT-BandList>
+            </BandInfoEUTRA>
+            <BandInfoEUTRA>
+                <interFreqBandList>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                    <InterFreqBandInfo>
+                        <interFreqNeedForGaps><true/></interFreqNeedForGaps>
+                    </InterFreqBandInfo>
+                </interFreqBandList>
+                <interRAT-BandList>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                    <InterRAT-BandInfo>
+                        <interRAT-NeedForGaps><true/></interRAT-NeedForGaps>
+                    </InterRAT-BandInfo>
+                </interRAT-BandList>
+            </BandInfoEUTRA>
+        </bandListEUTRA>
+    </measParameters>
+    <featureGroupIndicators>
+        01011101000011111111110010000100
+    </featureGroupIndicators>
+    <interRAT-Parameters>
+        <utraFDD>
+            <supportedBandListUTRA-FDD><bandI/><bandII/><bandIV/><bandV/><bandVI/><bandVIII/><bandXIX-8a0/>
+            </supportedBandListUTRA-FDD>
+        </utraFDD>
+        <geran>
+            <supportedBandListGERAN><gsm850/><gsm900E/><gsm1800/><gsm1900/>
+            </supportedBandListGERAN>
+            <interRAT-PS-HO-ToGERAN><false/></interRAT-PS-HO-ToGERAN>
+        </geran>
+    </interRAT-Parameters>
+    <nonCriticalExtension>
+        <phyLayerParameters-v920>
+        </phyLayerParameters-v920>
+        <interRAT-ParametersGERAN-v920>
+            <e-RedirectionGERAN-r9><supported/></e-RedirectionGERAN-r9>
+        </interRAT-ParametersGERAN-v920>
+        <interRAT-ParametersUTRA-v920>
+            <e-RedirectionUTRA-r9><supported/></e-RedirectionUTRA-r9>
+        </interRAT-ParametersUTRA-v920>
+        <csg-ProximityIndicationParameters-r9>
+            <utran-ProximityIndication-r9><supported/></utran-ProximityIndication-r9>
+        </csg-ProximityIndicationParameters-r9>
+        <neighCellSI-AcquisitionParameters-r9>
+            <intraFreqSI-AcquisitionForHO-r9><supported/></intraFreqSI-AcquisitionForHO-r9>
+            <interFreqSI-AcquisitionForHO-r9><supported/></interFreqSI-AcquisitionForHO-r9>
+            <utran-SI-AcquisitionForHO-r9><supported/></utran-SI-AcquisitionForHO-r9>
+        </neighCellSI-AcquisitionParameters-r9>
+        <son-Parameters-r9>
+            <rach-Report-r9><supported/></rach-Report-r9>
+        </son-Parameters-r9>
+        <nonCriticalExtension>
+            <lateNonCriticalExtension>88 00 00 00 00</lateNonCriticalExtension>
+        </nonCriticalExtension>
+    </nonCriticalExtension>
+</UE-EUTRA-Capability>
+[SCTP][I][sctp_send_data] Successfully sent 93 bytes on stream 1 for assoc_id 1
+[RRC][I]RRCConnectionReconfiguration Encoded 315 bits (40 bytes)
+[RRC][I][eNB 0] Frame 0, Logical Channel DL-DCCH, Generate RRCConnectionReconfiguration (bytes 40, UE id 5a54)
+[PDCP][I][FRAME 00000][eNB][MOD 00][RNTI 5a54]Received RRC_DCCH_DATA_REQ from TASK_RRC_ENB: instance 0, rb_id 1, muiP 2, confirmP 0, mode 1
+[RLC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54][SRB AM 01] RLC_AM_DATA_REQ size 45 Bytes,  NB SDU 1 current_sdu_index=2 next_sdu_index=3 conf 0 mui 2
+[RRC][N][eNB 0] Frame 866: received a DCCH 1 message on SRB 1 with Size 2 from UE 5a54
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54] Received on DCCH 1 RRC_DCCH_DATA_IND
+[RRC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54] UE State = RRC_RECONFIGURED (default DRB, xid 0)
+[PDCP][N][FRAME 00000][eNB][MOD 00][RNTI 5a54][SRB 02]  Action ADD  LCID 2 (SRB id 2) configured with SN size 5 bits and RLC AM
+[PDCP][N][FRAME 00000][eNB][MOD 00][RNTI 5a54][DRB 01]  Action ADD  LCID 3 (DRB id 1) configured with SN size 12 bits and RLC UM
+[RLC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54] [SRB 2] rrc_rlc_add_rlc  SRB
+[RLC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54][SRB AM 02][CONFIGURE] max_retx_threshold 32 poll_pdu 8 poll_byte 1000 t_poll_retransmit 15 t_reordering 35 t_status_prohibit 10
+[RLC][I]Adding DRB 1, lc_id 3
+[RLC][I][FRAME 00000][eNB][MOD 00][RNTI 5a54] [DRB 1] rrc_rlc_add_rlc  DRB
+[RRC][I][eNB 0] Frame  0 CC 0 : SRB2 is now active
+[RRC][I][eNB 0] Frame  0 : Logical Channel UL-DCCH, Received RRCConnectionReconfigurationComplete from UE rnti 5a54, reconfiguring DRB 1/LCID 3
+[RRC][I][eNB 0] Frame  0 : Logical Channel UL-DCCH, Received RRCConnectionReconfigurationComplete from UE 0, reconfiguring DRB 1/LCID 3
+[MAC][I][rrc_mac_config_req] [CONFIG][eNB 0/0] Configuring MAC/PHY for UE 0 (5a54)
+[PHY][I]phy_config_dedicated_eNB: physicalConfigDedicated=0x7f5b1c0094e0
+[PHY][I]Transmission Mode (phy_config_dedicated_eNB) 1
+[S1AP][I][s1ap_eNB_initial_ctxt_resp] initial_ctxt_resp_p: e_rab ID 5, enb_addr 192.168.4.100, SIZE 4 
+[SCTP][I][sctp_send_data] Successfully sent 42 bytes on stream 1 for assoc_id 1
+[PHY][I][eNB 0] Frame 469800160: Sent physicalConfigDedicated=0x900000000 for UE -1506657024
+[SCTP][I][sctp_eNB_flush_sockets] Found data for descriptor 40
+[SCTP][I][sctp_eNB_read_from_socket] Received notification for sd 40, type 32777
+[PHY][I]UE 0 : rnti 5a54
+[PHY][I]UE 1 : rnti a3f5
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[ENB_APP][I][apply_reconfiguration_policy] Time to apply a new policy 
+[ENB_APP][I][parse_dl_scheduler_config] Time to set the behavior attribute
+[FLEXRAN_AGENT][I]Opening pushed code: /mnt/oai_agent_cache/flexran_schedule_ue_spec_remote.so
+[FLEXRAN_AGENT][I]Loading function: flexran_schedule_ue_spec_remote
+[FLEXRAN_AGENT][I]New DL UE scheduler: flexran_schedule_ue_spec_remote
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+ULLULL[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+UULLLLL[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+ULULLLLLLLU[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+[PHY][I]UE 0 : rnti 5a54
+[MAC][I][eNB_dlsch_ulsch_scheduler] UE  rnti 5a54 : in synch
+[RRC][I]UE rnti 5a54:S-TMSI 2 failure timer 0/20000
+
+
+
+
+adb-tgt:~> pnadb -a
+already connected to pc599.emulab.net:8001
+adb-tgt:~> adb shell
+root@hammerhead:/ # ping -c 3 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=55 time=36.7 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=55 time=33.3 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=55 time=40.9 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 33.392/37.008/40.911/3.084 ms
+
+
+
+pc203:~> curl -X POST http://localhost:9999/dl_sched/1
+Loaded Remote Schedulerpc203:~>  curl -X GET http://localhost:9999/stats_manager/mac_stats
+***************
+MAC statistics
+****************
+UE MAC stats for agent 
+Rnti: 23124
+phr: 26
+rlc_report {
+  lc_id: 1
+  tx_queue_size: 0
+}
+rlc_report {
+  lc_id: 2
+  tx_queue_size: 0
+}
+rlc_report {
+  lc_id: 3
+  tx_queue_size: 0
+}
+pending_mac_ces: 1
+dl_cqi_report {
+  sfn_sn: 1056
+  csi_report {
+    serv_cell_index: 0
+    ri: 0
+    type: FLCSIT_P10
+    p10csi {
+      wb_cqi: 13
+    }
+  }
+}
+ul_cqi_report {
+  sfn_sn: 1056
+  cqi_meas {
+    type: FLUCT_SRS
+    serv_cell_index: 0
+  }
+  pucch_dbm {
+    p0_pucch_dbm: -92
+    serv_cell_index: 0
+  }
+}
+
+Harq status
+  |     |     |     |     |     |     |     |      |   
+  | ACK | ACK | ACK | ACK | ACK | ACK | ACK | ACK  |
+
+Rnti: 61268
+phr: 0
+rlc_report {
+  lc_id: 1
+  tx_queue_size: 0
+}
+rlc_report {
+  lc_id: 2
+  tx_queue_size: 0
+}
+rlc_report {
+  lc_id: 3
+  tx_queue_size: 0
+}
+pending_mac_ces: 1
+dl_cqi_report {
+  sfn_sn: 12896
+  csi_report {
+    serv_cell_index: 0
+    ri: 0
+    type: FLCSIT_P10
+    p10csi {
+      wb_cqi: 12
+    }
+  }
+}
+ul_cqi_report {
+  sfn_sn: 12896
+  cqi_meas {
+    type: FLUCT_SRS
+    serv_cell_index: 0
+  }
+  pucch_dbm {
+    p0_pucch_dbm: -92
+    serv_cell_index: 0
+  }
+}
+
+Harq status
+  |     |     |     |     |     |     |     |      |   
+  | ACK | ACK | ACK | ACK | ACK | ACK | ACK | ACK  |
+
+
+pc203:~> curl -X GET http://localhost:9999/stats_manager/enb_config
+*********************
+Agent Configurations
+*********************
+header {
+  version: 0
+  type: 8
+  xid: 0
+}
+cell_config {
+  cell_id: 0
+  pusch_hopping_offset: 0
+  hopping_mode: 0
+  n_sb: 0
+  phich_resource: 0
+  phich_duration: 0
+  dl_bandwidth: 50
+  ul_bandwidth: 50
+  ul_cyclic_prefix_length: 0
+  dl_cyclic_prefix_length: 0
+  antenna_ports_count: 1
+  duplex_mode: 1
+  prach_config_index: 0
+  prach_freq_offset: 2
+  ra_response_window_size: 7
+  mac_contention_resolution_timer: 5
+  max_HARQ_Msg3Tx: 0
+  n1PUCCH_AN: 0
+  deltaPUCCH_shift: 1
+  nRB_cqi: 0
+  srs_subframe_config: 0
+  srs_bw_config: 0
+  srs_mac_up_pts: 0
+  enable_64QAM: 0
+  carrier_index: 0
+}
+
+header {
+  version: 0
+  type: 10
+  xid: 1
+}
+ue_config {
+  rnti: 61268
+  time_alignment_timer: 469788480
+  transmission_mode: 0
+  ue_aggregated_max_bitrate_UL: 0
+  ue_aggregated_max_bitrate_DL: 0
+  capabilities {
+  }
+  ue_transmission_antenna: 2
+  tti_bundling: 469788480
+  beta_offset_ACK_index: 0
+  beta_offset_RI_index: 0
+  beta_offset_CQI_index: 8
+  ack_nack_simultaneous_trans: 0
+  simultaneous_ack_nack_cqi: 0
+  aperiodic_cqi_rep_mode: 3
+  tdd_ack_nack_feedback: 0
+  ack_nack_repetition_factor: 0
+  pcell_carrier_index: 0
+}
+ue_config {
+  rnti: 23124
+  time_alignment_timer: 7
+  transmission_mode: 0
+  ue_aggregated_max_bitrate_UL: 0
+  ue_aggregated_max_bitrate_DL: 0
+  capabilities {
+  }
+  ue_transmission_antenna: 2
+  tti_bundling: 0
+  max_HARQ_tx: 4
+  beta_offset_ACK_index: 0
+  beta_offset_RI_index: 0
+  beta_offset_CQI_index: 8
+  ack_nack_simultaneous_trans: 0
+  simultaneous_ack_nack_cqi: 0
+  aperiodic_cqi_rep_mode: 3
+  tdd_ack_nack_feedback: 0
+  ack_nack_repetition_factor: 0
+  pcell_carrier_index: 0
+}
+
+header {
+  version: 0
+  type: 12
+  xid: 2
+}
+lc_ue_config {
+  rnti: 23124
+  lc_config {
+    lcid: 1
+    direction: 2
+    qos_bearer_type: 0
+    qci: 1
+  }
+  lc_config {
+    lcid: 2
+    direction: 2
+    qos_bearer_type: 0
+    qci: 1
+  }
+  lc_config {
+    lcid: 3
+    direction: 1
+    qos_bearer_type: 0
+    qci: 1
+  }
+}
+
+
+sgw:~> /opt/OpenEPC/bin/mme.attach.sh
+
+14( 2648)  8:59:02 INFO:mme_nas_prepare_EMM_TRACKING_AREA_UPDATE_ACCEPT():889> Preparing the NAS Tracking Area Update Accept message
+14( 2648)  8:59:02 INFO:mme_nas_prepare_EMM_TRACKING_AREA_UPDATE_ACCEPT():925> Encoded the NAS Tracking Area Update Accept message
+14( 2648)  8:59:02 INFO:mme_s1ap_send_DOWNLINK_NAS_TRANSPORT():163> Preparing the S1AP Downlink NAS Transport message
+14( 2648)  8:59:02 INFO:mme_s1ap_send_DOWNLINK_NAS_TRANSPORT():188> Successfully sent the S1AP Downlink NAS Transport message
+13( 2647)  8:59:02 INFO:mme_s1ap_recv_UPLINK_NAS_TRANSPORT():217> Received an S1AP Uplink NAS Transport message
+13( 2647)  8:59:02 NOTI:mme_sm():1688>  -------------------
+13( 2647)  8:59:02 NOTI:mme_sm():1692>  |Session with IMSI [998981234560314] index [2]
+13( 2647)  8:59:02 NOTI:mme_sm():1695>  |   Procedure: [08:EMM__TRACKING_AREA_UPDATE]
+13( 2647)  8:59:02 NOTI:mme_sm():1698>  |       Stage: [08:EMM__TRACKING_AREA_UPDATE]
+13( 2647)  8:59:02 NOTI:mme_sm():1701>  |    Attempts: [1] Timeout [6]
+13( 2647)  8:59:02 NOTI:mme_sm():1706>  |  Event Type: [02:MESSAGE_RECEIVED_NAS_EMM]
+13( 2647)  8:59:02 NOTI:mme_sm():1725>  | Event Value: [15:NAS__Tracking_area_update_complete]
+13( 2647)  8:59:02 NOTI:mme_sm():1726>  -------------------
+13( 2647)  8:59:02 INFO:mme_s1ap_recv_UPLINK_NAS_TRANSPORT():243> Successfully processed the S1AP Uplink NAS Transport message
+13( 2647)  8:59:13 INFO:mme_s1ap_recv_INITIAL_UE_MESSAGE():51> Received an S1AP Initial UE Message
+13( 2647)  8:59:13 WARN:mme_s1ap_recv_INITIAL_UE_MESSAGE():63> Existing S1ap session
+13( 2647)  8:59:13 NOTI:mme_sm():1688>  -------------------
+13( 2647)  8:59:13 NOTI:mme_sm():1692>  |Session with IMSI [998981234560314] index [2]
+13( 2647)  8:59:13 NOTI:mme_sm():1695>  |   Procedure: [00:IDLE]
+13( 2647)  8:59:13 NOTI:mme_sm():1698>  |       Stage: [00:IDLE]
+13( 2647)  8:59:13 NOTI:mme_sm():1701>  |    Attempts: [0] Timeout [-1]
+13( 2647)  8:59:13 NOTI:mme_sm():1706>  |  Event Type: [02:MESSAGE_RECEIVED_NAS_EMM]
+13( 2647)  8:59:13 NOTI:mme_sm():1725>  | Event Value: [14:NAS__Service_request]
+13( 2647)  8:59:13 NOTI:mme_sm():1726>  -------------------
+13( 2647)  8:59:13 INFO:mme_nas_process_EMM_SERVICE_REQUEST():53> Received Service Request. Establishing bearers
+13( 2647)  8:59:13 INFO:mme_s1ap_send_INITIAL_CONTEXT_SETUP_REQUEST():53> Preparing the S1AP Initial Context Setup Request message
+13( 2647)  8:59:13 INFO:mme_s1ap_send_INITIAL_CONTEXT_SETUP_REQUEST():155> Successfully sent the S1AP Initial Context Setup Request messge
+13( 2647)  8:59:13 INFO:mme_s1ap_recv_INITIAL_UE_MESSAGE():134> Successfully processed the S1AP Initial UE Message message
+13( 2647)  8:59:13 INFO:mme_s1ap_recv_INITIAL_CONTEXT_SETUP_RESPONSE():189> Received an S1AP Initial Context Setup Response message
+13( 2647)  8:59:13 INFO:mme_gtpc_send_ModifyBearerRequest():547> Preparing GTPC Modify Bearer Request message
+13( 2647)  8:59:13 INFO:mme_gtpc_send_ModifyBearerRequest():623> Successfully sent GTPC Modify Bearer Request message
+13( 2647)  8:59:13 INFO:mme_s1ap_recv_INITIAL_CONTEXT_SETUP_RESPONSE():259> Successfully processed the S1AP Initial Context Setup Response message
+11( 2645)  8:59:13 NOTI:mme_sm():1688>  -------------------
+11( 2645)  8:59:13 NOTI:mme_sm():1692>  |Session with IMSI [998981234560314] index [2]
+11( 2645)  8:59:13 NOTI:mme_sm():1695>  |   Procedure: [09:EMM__SERVICE_REQUEST]
+11( 2645)  8:59:13 NOTI:mme_sm():1698>  |       Stage: [26:GTPC__MODIFY_BEARER]
+11( 2645)  8:59:13 NOTI:mme_sm():1701>  |    Attempts: [1] Timeout [3]
+11( 2645)  8:59:13 NOTI:mme_sm():1706>  |  Event Type: [04:MESSAGE_RECEIVED_GTP]
+11( 2645)  8:59:13 NOTI:mme_sm():1739>  | Event Value: [45:GTPC__MODIFY_BEARER]
+11( 2645)  8:59:13 NOTI:mme_sm():1740>  -------------------
+11( 2645)  8:59:13 INFO:mme_gtpc_process_ModifyBearerResponse():669> Processing the GTPC Modify Bearer Response message
+11( 2645)  8:59:13 INFO:mme_gtpc_process_ModifyBearerResponse():803> Successfully processed GTPC Modify Bearer Response message
+
+
+
+
+
+1( 2607)  9:02:39 NOTI:console_loop():457>  MME >mme.enb.print     
+ 1( 2607)  9:02:40 WARN:execute_external():225> 
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Current Index [2] Current MME ID [4367698]
+eNodeB: [2] IP [192.168.4.100] TAC [1] eNB-ID [7] Connected IDs: 
+        [S1AP IDs: 420141-4367687]  ->      [MME Index 2]
+        [S1AP IDs: 7332060-4367688] ->      [MME Index 2]
+        [S1AP IDs: 16398672-4367689]        ->      [MME Index 2]
+        [S1AP IDs: 7773174-4367690] ->      [MME Index 2]
+        [S1AP IDs: 6840557-4367691] ->      [MME Index 2]
+        [S1AP IDs: 3105598-4367692] ->      [MME Index 2]
+        [S1AP IDs: 2952451-4367693] ->      [MME Index 2]
+        [S1AP IDs: 6304976-4367694] ->      [MME Index 2]
+        [S1AP IDs: 13408722-4367695]        ->      [MME Index 2]
+        [S1AP IDs: 5200024-4367696] ->      [MME Index 2]
+        [S1AP IDs: 4058422-4367697] ->      [MME Index 2]
+        [S1AP IDs: 10104933-4367698]        ->      [MME Index 2]
+
+----------------------------------------
+
+MME > mme.config.print
+32 NOTI:console_loop():457>  MME >  
+ 1( 2607)  9:03:33 WARN:execute_external():225> MME Configurationt  
+S1ap Address: [192.168.4.80]
+S11 Address: [192.168.4.80]
+S6a Address: [192.168.254.80]
+GUMMEI: [MCC:998] [MNC:98][GroupID:123][Code:45]
+MME Name: [MME_1.OpenEPC]
+Security: [Primary EIA:1] [Secondary EIA:1][Primary EEA:0][Secondary EEA:0]
+Other: [Hash size:24] [Relative Capacity:255][Combined IMSI/EPS Attach]
+ Served TA: MCC [998] MNC [098] TAC [00001] 
+ Served TA: MCC [998] MNC [098] TAC [00001] 
+ Served TA: MCC [998] MNC [098] TAC [00001] 
+ Served TA: MCC [998] MNC [098] TAC [00001] 
+ Served TA: MCC [998] MNC [098] TAC [00001] 
+ Served TA: MCC [998] MNC [098] TAC [00001] 
+ Served TA: MCC [998] MNC [098] TAC [00001] 
+ Served TA: MCC [998] MNC [098] TAC [00001] 
+ Served TA: MCC [998] MNC [098] TAC [00001] 
+ Served TA: MCC [998] MNC [098] TAC [00001] 
+ TA MCC [001] MNC [001] TAC [00002] GID [00023] CODE [021] MME [192.168.4.87]
+ RA MCC [001] MNC [001] TAC [0012] SGSN [192.168.4.120]
+
+pgw:~> /opt/OpenEPC/bin/pgw.attach.sh
+NOTI:console_loop():457> PDNGw LMA/PCEF Console> gw_bindings.print 
+
+
+DNSv6: 
++----- Control -----------------
+| TEID:[00000001] Active :[1:GTP] New :[0:NONE]
+| North: 
+| South: 
+|    PMIP:  Local: [] Type:[0:S1U_eNodeB_U]
+|          Remote: [] GRE:[00000000] Type:[0:S1U_eNodeB_U]
+|     GTP:  Local: [fc00:1234:2::10] Type:[7:S5S8_PGW_C]
+|          Remote: [fc00:1234:2::20] GRE:[00000001] Type:[6:S5S8_SGW_C]
++----- Bearers -----------------
+|+----- Bearer  5 --------------
+||North: Local  [] GRE:[00000000] Type:[0-S1U_eNodeB_U]
+||       Remote [] GRE:[00000000] Type:[0-S1U_eNodeB_U]
+||South: Local  [fc00:1234:2::10] GRE:[739d1e19] Type:[5-S5S8_PGW_U]
+||       Remote [fc00:1234:2::20] GRE:[739ec7e1] Type:[4-S5S8_SGW_U]
+||    Bearer QoS: QCI [0]       Max UL [0] Max DL [0]
+||    GBR UL [0] GBR DL [0]    APN UL [0] APN DL [0]
+||    Bound PCC Rule IDs: 
+|| No sdfs
+|+------------------------------
++-------------------------------
+ Default BearerID [5]  Request type: [0] Request id: [0]
+PCC Session:
+Id: [pcef.epc.mnc001.mcc001.3gppnetwork.org;3032197439;2] CC_Nb: [1] CC_State: [0] 
+AN Charging Address: [fc00:1234:2::10] AN Charging Id: [fc439e0c] 
+AN GW: [fc00:1234:2::20] 
+PGW: [fc00:1234:2::10] 
+      Rule [pcrf.epc.mnc001.mcc001.3gppnetwork.org;1500883360;0] with Precedence [200]
+     Qci:[7]   Max UP:[0] Max DOWN:[0] Guaranteed Upload:[0] Guaranteed Download:[0] APN Upload:[164000] APN Download:[164000]
+        SDF: [Flags: ipv4 permit uplink]
+             From: [192.168.3.33/32:0]  To: [any:0] 
+ Flow Desc: [permit in ip from 192.168.3.33 to any] 
+        SDF: [Flags: ipv4 permit downlink]
+             From: [any:0]  To: [192.168.3.33/32:0] 
+ Flow Desc: [permit out ip from any to 192.168.3.33] 
+ Charging ID [4232289804]AF Charging ID [] Rating Group [100]
+ ACCT REC NB 0 Online Charging [1] Offline Charging [1] Reporting level [0] Rating Group [100] Service Identifier [999]
+AN GW: [fc00:1234:2::20] 
+PGW: [fc00:1234:2::10]  Download Octets 0 Upload Octets 0 Download Packets 0 Upload Packets 0
+
+
+
+
+
