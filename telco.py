@@ -1,31 +1,40 @@
 import pandas as pd
+import numpy as np
+import collections
 import tensorflow as tf
 import os
 
-train1 = os.path.abspath('C:/Users/cupid/dnn/sms-call-internet-mi-2013-11-01_new.csv')
-test1 = os.path.abspath('C:/Users/cupid/dnn/sms-call-internet-mi-2013-11-02_new.csv')
+root_dir = os.path.abspath('../..')
+data_dir = os.path.join(root_dir, 'home', 'worker')
 
 
-CSV_COLUMN_NAMES = ['sms_in_activity', 'sms_out_activity', 'call_in_activity', 'call_out_activity', 'internet_traffic_activity', 'total_activity', 'activity']
+
+COLUMN_TYPES = collections.OrderedDict([
+    ("sms_in_activity", float), 
+    ("sms_out_activity", float),
+    ("call_in_activity", float),
+    ("call_out_activity", float),
+    ("internet_traffic_activity", float),
+    ("total_activity", float),
+    ("activity", int)
+])
+
 
 ACTIVITY = ['Level 1 traffic', 'Level 2 traffic', 'Level 3 traffic', 'Level 4 traffic', 'Level 5 traffic', 'Level 6 traffic']
 
 def maybe_download():
-    train_path = tf.keras.utils.get_file(train1.split('/')[-1], train1)
-    test_path = tf.keras.utils.get_file(test1.split('/')[-1], test1)
+    df = pd.read_csv(os.path.join(data_dir, 'sms-call-internet-mi_datset_with_labels.csv'), names=COLUMN_TYPES.keys(), dtype=COLUMN_TYPES, header=0)
 
-    return train_path, test_path
+    return df
 
-def load_data(y_name='activity'):
+def load_data(y_name='activity', train_fraction=0.7, seed=None):
     
-    train_path, test_path = maybe_download()
-
-    train = pd.read_csv(train_path, names=CSV_COLUMN_NAMES, header=0)
-    train_x, train_y = train, train.pop(y_name)
-
-    test = pd.read_csv(test_path, names=CSV_COLUMN_NAMES, header=0)
-    test_x, test_y = test, test.pop(y_name)
-
+    data = maybe_download()
+    np.random.seed(seed)
+    train_x = data.sample(frac=train_fraction, random_state=seed)
+    test_x = data.drop(train_x.index)
+    train_y = train_x.pop(y_name)
+    test_y = test_x.pop(y_name)
     return (train_x, train_y), (test_x, test_y)
 
 
@@ -34,7 +43,7 @@ def train_input_fn(features, labels, batch_size):
     dataset = tf.data.Dataset.from_tensor_slices((dict(features), labels))
 
    
-    dataset = dataset.shuffle(2000000).repeat().batch(batch_size)
+    dataset = dataset.shuffle(70000000).repeat().batch(batch_size)
 
    
     return dataset
